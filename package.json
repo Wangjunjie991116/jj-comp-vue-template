@@ -17,17 +17,22 @@
     "build": "vant-cli build",
     "release": "vant-cli release",
     "test:coverage": "open test/coverage/index.html",
-    "build-site": "vant-cli build-site && npx gh-pages -d site-dist"
+    "build-site": "vant-cli build-site && npx gh-pages -d site-dist",
+    "prepare": "husky install"
   },
   "author": "",
   "husky": {
     "hooks": {
-      "pre-commit": "nano-staged",
-      "commit-msg": "vant-cli commit-lint"
-    }
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    },
+    "package.json": "sort-package-json"
   },
-  "nano-staged": {
-    "*.{ts,tsx,js,jsx,vue}": "eslint --fix"
+  "lint-staged": {
+    "*./src/**/*.{js,ts,json,css,less,scss,md,tsx,jsx,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "peerDependencies": {
     "vue": "^2.6.11",
@@ -36,10 +41,14 @@
   "devDependencies": {
     "@babel/runtime": "^7.27.1",
     "@vant/cli": "^2.0.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "husky": "^8.0.3",
     "sass": "^1.89.0",
     "sass-loader": "^10.0.0",
     "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "sort-package-json": "^2.10.0"
   },
   "eslintConfig": {
     "root": true,
