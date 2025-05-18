@@ -1,12 +1,14 @@
 {
   "name": "jj-comp-vue-template",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "description": "",
   "main": "lib/jj-comp-vue-template.js",
+  "types": "lib/index.d.ts",
   "style": "lib/index.css",
   "files": [
     "lib",
-    "es"
+    "es",
+    "*.d.ts"
   ],
   "scripts": {
     "dev": "vant-cli dev",
@@ -50,5 +52,6 @@
     "Android >= 4.0",
     "iOS >= 8"
   ],
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "license": "MIT",
+  "packageManager": "yarn@1.22.22"
 }
