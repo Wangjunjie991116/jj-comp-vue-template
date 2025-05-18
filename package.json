@@ -36,6 +36,8 @@
   "devDependencies": {
     "@babel/runtime": "^7.27.1",
     "@vant/cli": "^2.0.0",
+    "sass": "^1.89.0",
+    "sass-loader": "^10.0.0",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
