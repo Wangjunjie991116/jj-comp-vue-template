@@ -1,6 +1,6 @@
 {
   "name": "jj-comp-vue-template",
-  "version": "1.0.0",
+  "version": "0.0.1-beta",
   "description": "",
   "main": "lib/jj-comp-vue-template.js",
   "style": "lib/index.css",
